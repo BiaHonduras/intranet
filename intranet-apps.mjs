@@ -18,4 +18,5 @@ export function sameOriginPath(path,origin){const url=new URL(path,origin);if(ur
 export function applicationHref(app,origin){if(!app.external)return sameOriginPath(app.path,origin);const entry=INTRANET_APPS.find(a=>a.id===app.id&&a.external);if(!entry||entry.path!==app.path)throw Error('Enlace externo no autorizado.');return entry.path;}
 
 
-export function corporateLoginIdentifier(value){const login=String(value??'').trim();return login.toLowerCase()==='preventa'?'motoristas.preventa@intranet.invalid':login}
+export function corporateLoginIdentifier(value){const login=String(value??'').trim();return ['preventa','motorista'].includes(login.toLowerCase())?'motoristas.preventa@intranet.invalid':login.toLowerCase()==='preventista'?'preventistas.preventa@intranet.invalid':login}
+
