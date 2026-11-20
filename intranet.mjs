@@ -1,4 +1,4 @@
-import {createUserManagement} from './intranet-users.mjs?v=20261029-layout';
+import {createUserManagement} from './intranet-users.mjs?v=20261120-jefaturas';
 import {supabase,iniciarSesion,cerrarSesion} from '/control-tiempos/supabase-config.js';
 import {applicationsFor,applicationHref,corporateLoginIdentifier} from './intranet-apps.mjs?v=20261030-ops';
 const $=id=>document.getElementById(id),escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
